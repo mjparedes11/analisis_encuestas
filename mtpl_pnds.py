@@ -2,9 +2,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import os
+
+print(os.getcwd())
 
 # Cargar el archivo CSV
-df = pd.read_csv("C:\\Users\\USUARIO\\Desktop\\de.csv", sep=';', encoding='utf-8')
+ruta = 'encuestas.csv'
+df = pd.read_csv(ruta, sep=';', encoding='utf-8')
 
 # Filtrar solo preguntas cerradas (3, 4 o 5 opciones)
 preguntas_cerradas = [col for col in df.columns if '/3' in col or '/4' in col or '/5' in col]
