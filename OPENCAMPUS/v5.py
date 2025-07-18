@@ -3,6 +3,7 @@ import os
 import glob
 import numpy as np
 from IPython.display import display  # Importar display para mejor salida en Jupyter
+print(os.getcwd())
 
 # Ruta de la carpeta con los CSV
 carpeta = 'OPENCAMPUS\\notas-opencampus2020'
